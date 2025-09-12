@@ -28,18 +28,18 @@ const PlaylistPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "Tum Hi Ho",
-      artist: "Arijit Singh",
-      dedication: "Bollywood ka best romantic song... just like our love story! 🎵",
+      title: "Mann Mera",
+      artist: "Brain",
+      dedication: "This song gives another Vibe isn't",
       duration: "4:22",
       coverColor: "from-purple-400 to-indigo-500",
       file: "/songs/tumhiho.mp3"
     },
     {
       id: 3,
-      title: "Mere Samne Wali",
-      artist: "Kishore Kumar",
-      dedication: "Kash mai tera neighbour hota! 💖",
+      title: "Dil ka jo Haal",
+      artist: "Heart",
+      dedication: "sach mai how do i express mere dil ka haal 💖",
       duration: "4:29",
       coverColor: "from-blue-400 to-cyan-500",
       file: "/songs/allofme.mp3"
