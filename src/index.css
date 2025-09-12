@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='%23ff69b4'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E"), auto;
+}
+
+/* Glowing text effect */
+.glowing-text {
+  text-shadow: 0 0 10px rgba(219, 39, 119, 0.5), 0 0 20px rgba(219, 39, 119, 0.3);
+}
+
+/* Floating hearts animation */
+.floating-heart {
+  animation: floatHeart 4s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Balloon animations */
+.balloon {
+  animation: balloonFloat 3s ease-in-out infinite;
+}
+
+@keyframes balloonFloat {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-30px) rotate(2deg); }
+}
+
+.balloon-1 { animation-duration: 3s; }
+.balloon-2 { animation-duration: 3.5s; }
+.balloon-3 { animation-duration: 2.8s; }
+.balloon-4 { animation-duration: 3.2s; }
+.balloon-5 { animation-duration: 2.9s; }
+
+/* Countdown box styling */
+.countdown-box {
+  @apply bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-xl p-4 shadow-lg;
+}
+
+.countdown-number {
+  @apply text-3xl font-bold;
+}
+
+.countdown-label {
+  @apply text-sm opacity-90;
+}
+
+/* Curtains animation */
+.curtains-container {
+  @apply relative w-full h-full;
+}
+
+.curtain {
+  @apply absolute top-0 w-1/2 h-full bg-gradient-to-br from-red-800 via-red-900 to-purple-900 cursor-pointer transition-all duration-2000 ease-out;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.left-curtain {
+  @apply left-0;
+}
+
+.right-curtain {
+  @apply right-0;
+}
+
+.curtain:hover {
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+.curtains-container:hover .left-curtain {
+  transform: translateX(-10px);
+}
+
+.curtains-container:hover .right-curtain {
+  transform: translateX(10px);
+}
+
+.curtains-container:active .left-curtain {
+  transform: translateX(-100%);
+}
+
+.curtains-container:active .right-curtain {
+  transform: translateX(100%);
+}
+
+.rope-container {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10;
+}
+
+.rope {
+  @apply w-2 h-32 bg-yellow-600 mx-auto rounded-full shadow-md;
+}
+
+.rope-handle {
+  @apply text-4xl text-center mt-2 animate-bounce;
+}
+
+/* Rose petals animation */
+.rose-petal {
+  animation: fallPetal 6s linear infinite;
+}
+
+@keyframes fallPetal {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Confetti animation */
+.confetti-piece {
+  animation: confettiFall 4s linear infinite;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Timeline styling */
+.timeline-glow {
+  box-shadow: 0 0 20px rgba(219, 39, 119, 0.5);
+  height: 100%;
+}
+
+.timeline-dot-glow {
+  box-shadow: 0 0 15px rgba(219, 39, 119, 0.7);
+}
+
+.memory-card-hover {
+  transition: all 0.3s ease;
+}
+
+.memory-card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating envelopes */
+.floating-envelope {
+  animation: floatEnvelope 4s ease-in-out infinite;
+}
+
+@keyframes floatEnvelope {
+  0%, 100% { transform: translateY(0px) rotate(-5deg); }
+  50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+/* Letter animation */
+.letter-open-animation {
+  animation: letterOpen 0.8s ease-out forwards;
+}
+
+@keyframes letterOpen {
+  0% {
+    transform: scale(0.1) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.envelope-hover {
+  transition: all 0.3s ease;
+}
+
+.envelope-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.envelope-hover:hover .envelope-flap {
+  transform: rotateX(-45deg);
+}
+
+/* Balloon game animations */
+.balloon-float {
+  animation: balloonBob 2s ease-in-out infinite;
+}
+
+@keyframes balloonBob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.balloon-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.pop-effect {
+  animation: popAnimation 0.5s ease-out forwards;
+}
+
+@keyframes popAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.celebration-animation {
+  animation: celebrate 1s ease-out forwards;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Gift box animations */
+.gift-box-hover {
+  transition: all 0.3s ease;
+}
+
+.gift-box-hover:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.gift-box-glow {
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.5);
+}
+
+.gift-opening-animation {
+  animation: giftOpen 1s ease-out forwards;
+}
+
+@keyframes giftOpen {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sparkle-explosion {
+  animation: sparkleExplode 2s ease-out infinite;
+}
+
+@keyframes sparkleExplode {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) translateX(120px);
+    opacity: 0;
+  }
+}
+
+.coupon-reveal {
+  animation: couponReveal 0.8s ease-out forwards;
+}
+
+@keyframes couponReveal {
+  0% {
+    transform: scale(0.1) rotateY(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Sparkle background */
+.sparkle {
+  animation: sparkletwinkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkletwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .glowing-text {
+    font-size: 3rem;
+  }
+  
+  .curtain {
+    background-size: cover;
+  }
+  
+  .rope-handle {
+    font-size: 2rem;
+  }
+}
+
+/* Additional hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(219, 39, 119, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button animations */
+.btn-bounce:hover {
+  animation: buttonBounce 0.5s ease-in-out;
+}
+
+@keyframes buttonBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
