@@ -58,9 +58,23 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Always reset to first page when curtains open
   const handleCurtainsOpen = () => {
+    setCurrentStep(0);
     setShowCurtains(false);
   };
+
+  // Extra safety: whenever curtains close → reset step
+  useEffect(() => {
+    if (!showCurtains) {
+      setCurrentStep(0);
+    }
+  }, [showCurtains]);
+
+  // Debug log (optional, remove when not needed)
+  useEffect(() => {
+    console.log('DEBUG:', { showCurtains, currentStep });
+  }, [showCurtains, currentStep]);
 
   if (!isUnlockedState) {
     return <CountdownPage />;
@@ -94,7 +108,9 @@ function App() {
           {/* Next button */}
           {currentStep < pages.length - 1 && (
             <button
-              onClick={() => setCurrentStep(currentStep + 1)}
+              onClick={() =>
+                setCurrentStep((prev) => Math.min(prev + 1, pages.length - 1))
+              }
               className="mt-8 px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-2xl shadow-lg hover:bg-pink-600 transition-all"
             >
               Next ➡️
