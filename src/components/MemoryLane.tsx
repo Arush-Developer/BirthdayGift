@@ -81,11 +81,12 @@ const MemoryLane: React.FC = () => {
                     className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-pink-200 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl memory-card-hover"
                     onClick={() => setSelectedMemory(selectedMemory === memory.id ? null : memory.id)}
                   >
-                    <div className="aspect-w-16 aspect-h-12 mb-4">
+                    {/* Enlarged Image Area */}
+                    <div className="mb-4">
                       <img
                         src={memory.photo}
                         alt="Memory"
-                        className="w-full h-48 object-cover rounded-xl"
+                        className="w-full max-h-[22rem] object-contain rounded-xl"
                       />
                     </div>
                     
