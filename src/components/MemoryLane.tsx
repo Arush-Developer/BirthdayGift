@@ -15,38 +15,38 @@ const MemoryLane: React.FC = () => {
   const memories: Memory[] = [
     {
       id: 1,
-      photo: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400',
-      caption: 'Yeh din = pura filmy scene 🎥 Tu kitni cute lag rahi thi!',
-      location: 'Coffee Shop',
-      date: 'First Date'
+      photo: '/1.jpg',
+      caption: 'Humara yeh couple photo dekh ke dil khush ho jaata hai! 💕 Tu green mein kitni pretty lag rahi hai!',
+      location: 'Special Day Out',
+      date: 'Together Moment'
     },
     {
       id: 2,
-      photo: 'https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&w=400',
-      caption: 'Mereko yeh moment abhi bhi yaad hai 😍 Tera hasso ka magic!',
-      location: 'Park Walk',
-      date: 'Random Tuesday'
+      photo: '/2.jpg',
+      caption: 'Garden mein tu kitni natural aur beautiful lag rahi hai! 🌿 Tera yeh casual look = my favorite!',
+      location: 'Garden Vibes',
+      date: 'Sunny Day'
     },
     {
       id: 3,
-      photo: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=400',
-      caption: 'Iss selfie mein tu sabse zyada glow kar rahi hai ✨',
-      location: 'Our Favorite Spot',
-      date: 'Weekend Fun'
+      photo: '/3.jpg',
+      caption: 'Yeh funny moments = best memories! 😂 Tu sunglasses mein bhi itni cute lagti hai!',
+      location: 'Fun Times',
+      date: 'Crazy Day'
     },
     {
       id: 4,
-      photo: 'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&w=400',
-      caption: 'Tu meri sunshine hai, literally! ☀️ Look at that smile!',
-      location: 'Beach Day',
-      date: 'Summer Vibes'
+      photo: '/4.jpg',
+      caption: 'Black and white mein bhi tu colorful lagti hai! 🖤 Tera yeh pose = pure art!',
+      location: 'Artistic Moment',
+      date: 'Creative Day'
     },
     {
       id: 5,
-      photo: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=400',
-      caption: 'CEO mode ON! 👩‍💼 Tu boss lady lagti hai yahan',
-      location: 'Office Photoshoot',
-      date: 'Professional Day'
+      photo: '/5.jpg',
+      caption: 'Teddy bear ke saath tu kitni adorable lag rahi hai! 🧸 Pink mein tu princess lagti hai!',
+      location: 'Cozy Home',
+      date: 'Cuddle Time'
     }
   ];
 
