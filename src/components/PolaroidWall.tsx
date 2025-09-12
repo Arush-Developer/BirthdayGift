@@ -12,54 +12,19 @@ interface Polaroid {
 const PolaroidWall: React.FC = () => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
 
+  // Using local images from public folder
   const polaroids: Polaroid[] = [
-    {
-      id: 1,
-      image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'Our First Date ☕',
-      caption: 'Yeh din kitna special tha! Tu kitni nervous thi, but cute lag rahi thi! ☕💕',
-      rotation: 'rotate-3'
-    },
-    {
-      id: 2,
-      image: 'https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'Random Selfie 📱',
-      caption: 'Tera yeh candid smile = meri weakness! Natural beauty queen! 😍✨',
-      rotation: '-rotate-2'
-    },
-    {
-      id: 3,
-      image: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'CEO Mode ON 👩‍💼',
-      caption: 'Professional look mein bhi tu sabse cute lagti hai! Boss lady vibes! 💼👑',
-      rotation: 'rotate-1'
-    },
-    {
-      id: 4,
-      image: 'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'Sunshine Girl ☀️',
-      caption: 'Tu meri daily dose of vitamin D hai! Tera smile = instant happiness! 🌞💖',
-      rotation: '-rotate-3'
-    },
-    {
-      id: 5,
-      image: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'Candid Moment 📸',
-      caption: 'Unfiltered beauty! Tu makeup ke bina bhi sabse zyada pretty hai! 🥰',
-      rotation: 'rotate-2'
-    },
-    {
-      id: 6,
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
-      frontText: 'Happy Vibes 😊',
-      caption: 'Tera yeh expression dekh ke mera din ban jaata hai! Cuteness overload! 💕',
-      rotation: '-rotate-1'
-    }
+    { id: 1, image: '/6.jpg', frontText: 'Our First Date ☕', caption: 'Yeh din kitna special tha! Tu kitni nervous thi, but cute lag rahi thi! ☕💕', rotation: 'rotate-3' },
+    { id: 2, image: '/7.jpg', frontText: 'Random Selfie 📱', caption: 'Tera yeh candid smile is meri weakness! Natural beauty queen! 😍✨', rotation: '-rotate-2' },
+    { id: 3, image: '/8.jpg', frontText: 'This one blows me off', caption: 'Perfect body of perfect people 🥵👑', rotation: 'rotate-1' },
+    { id: 4, image: '/9.jpg', frontText: 'Sunshine Girl ☀️', caption: 'Tu meri daily dose of vitamin D hai! Tera smile = instant happiness! 🌞💖', rotation: '-rotate-3' },
+    { id: 5, image: '/10.jpg', frontText: 'Cutness captured 📸', caption: 'Unfiltered beauty! Tu makeup ke bina bhi sabse zyada pretty hai! 🥰', rotation: 'rotate-2' },
+    { id: 6, image: '/11.jpg', frontText: 'Happy Vibes 😊', caption: 'Tujhe dekh kar mera dil jhoom jata hai fr 💕', rotation: '-rotate-1' },
   ];
 
   const handlePolaroidClick = (polaroidId: number) => {
-    setFlippedCards(prev => 
-      prev.includes(polaroidId) 
+    setFlippedCards(prev =>
+      prev.includes(polaroidId)
         ? prev.filter(id => id !== polaroidId)
         : [...prev, polaroidId]
     );
@@ -91,7 +56,7 @@ const PolaroidWall: React.FC = () => {
             Polaroid Memory Wall 📸
           </h2>
           <p className="text-xl text-gray-700 font-medium mb-4">
-            Click on each photo to flip and read the caption! 😍
+            Click on each photo to flip and read 😍
           </p>
           <div className="flex items-center justify-center">
             <Camera className="w-8 h-8 text-orange-500 mr-2" />
@@ -129,7 +94,7 @@ const PolaroidWall: React.FC = () => {
                 >
                   <div className={`polaroid-card ${isFlipped ? 'flipped' : ''}`}>
                     {/* Front of polaroid */}
-                    <div className="polaroid-front bg-white rounded-lg shadow-xl p-4">
+                    <div className="polaroid-front bg-white rounded-lg shadow-xl p-4 relative">
                       <div className="aspect-square mb-4 overflow-hidden rounded">
                         <img
                           src={polaroid.image}
@@ -147,7 +112,7 @@ const PolaroidWall: React.FC = () => {
                     </div>
 
                     {/* Back of polaroid */}
-                    <div className="polaroid-back bg-white rounded-lg shadow-xl p-6 flex flex-col justify-center">
+                    <div className="polaroid-back bg-white rounded-lg shadow-xl p-6 flex flex-col justify-center absolute top-0 left-0 w-full h-full backface-hidden transform rotate-y-180">
                       <div className="text-center">
                         <div className="flex items-center justify-center mb-4">
                           <Heart className="w-6 h-6 text-red-500 animate-pulse mr-2" />
@@ -183,10 +148,10 @@ const PolaroidWall: React.FC = () => {
               <Camera className="w-16 h-16 mx-auto animate-bounce mb-4" />
               <h3 className="text-3xl font-bold mb-4">🎉 All Photos Explored! 🎉</h3>
               <p className="text-xl mb-4">
-                Tu ne saare polaroids dekh liye! Each photo mein tera koi na koi cute moment capture hai! 📸💖
+                I wish ki hum aur bohot sari memories banaye saath mai bhi and is picture wall pe add karde 📸💖
               </p>
               <p className="text-lg text-pink-200">
-                More photos coming soon... camera ready rakhna! 😘
+                More smile on your face is yet to come!, keep the camera ready to click 😘
               </p>
               
               <button
@@ -202,10 +167,10 @@ const PolaroidWall: React.FC = () => {
         <div className="text-center mt-8">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-orange-200 inline-block">
             <p className="text-lg text-gray-700 font-medium">
-              Yeh sirf starting hai... aur bhi photos add karte rahenge! 📷✨
+              Abhi to apna safar shuru hua hai ji long live Saanu✨
             </p>
             <p className="text-orange-600 mt-2">
-              Tu meri favorite model hai! 💖
+              17 saal ki hogayi par aaj bhi sweet 16 haan! 💖
             </p>
           </div>
         </div>
