@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
       </h1>
       <p className="mt-4 text-xl md:text-2xl text-gray-700 italic">
         Aaj ke din tu meri Queen hai 👑<br />  
-        aur main tera Arush 😏
+        aur main tera Aru Forever 😏
       </p>
 
       {/* Decorative Line */}
