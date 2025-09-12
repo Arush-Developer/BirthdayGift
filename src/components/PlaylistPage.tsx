@@ -19,10 +19,10 @@ const PlaylistPage: React.FC = () => {
   const playlist: Song[] = [
     {
       id: 1,
-      title: "Perfect",
-      artist: "Ed Sheeran",
-      dedication: "Yeh song sunke tujhe yaad karta hun... tu sach mein perfect hai! 💕",
-      duration: "4:23",
+      title: "Jhol",
+      artist: "Saani's Eyes",
+      dedication: "uff... sachi mai teri yaad aa jati ye sunke  💕",
+      duration: "1:43",
       coverColor: "from-pink-400 to-rose-500",
       file: "/songs/perfect.mp3"
     },
@@ -37,9 +37,9 @@ const PlaylistPage: React.FC = () => {
     },
     {
       id: 3,
-      title: "All of Me",
-      artist: "John Legend",
-      dedication: "All of me loves all of you... literally! Tu meri everything hai! 💖",
+      title: "Mere Samne Wali",
+      artist: "Kishore Kumar",
+      dedication: "Kash mai tera neighbour hota! 💖",
       duration: "4:29",
       coverColor: "from-blue-400 to-cyan-500",
       file: "/songs/allofme.mp3"
