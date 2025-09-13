@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
         🎂 Happyyyy Birthdayyyy Saanu!!! 💖
       </h1>
       <p className="mt-4 text-xl md:text-2xl text-gray-700 italic">
-        So my Queen It's you special day!👑<br />  
+        So my Queen It's your special day!👑<br />  
         Let me Make it super special! 😏
       </p>
 
