@@ -16,35 +16,35 @@ const MemoryLane: React.FC = () => {
     {
       id: 1,
       photo: '/1.jpg',
-      caption: 'Humara yeh couple photo dekh ke dil khush ho jaata hai! 💕 Tu green mein kitni pretty lag rahi hai!',
+      caption: 'Humara yeh couple photo dekh ke dil khush ho jaata hai! 💕 kitni pyaari lagri hai!',
       location: 'Special Day Out',
       date: 'Together Moment'
     },
     {
       id: 2,
       photo: '/2.jpg',
-      caption: 'Garden mein tu kitni natural aur beautiful lag rahi hai! 🌿 Tera yeh casual look = my favorite!',
+      caption: 'CEO in Casual mood very bossy and pretty lol',
       location: 'Garden Vibes',
       date: 'Sunny Day'
     },
     {
       id: 3,
       photo: '/3.jpg',
-      caption: 'Yeh funny moments = best memories! 😂 Tu sunglasses mein bhi itni cute lagti hai!',
+      caption: 'Ye din yaad hai? our virtual valentines day lol',
       location: 'Fun Times',
-      date: 'Crazy Day'
+      date: 'Valentine Day'
     },
     {
       id: 4,
       photo: '/4.jpg',
-      caption: 'Black and white mein bhi tu colorful lagti hai! 🖤 Tera yeh pose = pure art!',
+      caption: 'This pose is uff, mehendi bhi mast hai hehehe',
       location: 'Artistic Moment',
       date: 'Creative Day'
     },
     {
       id: 5,
       photo: '/5.jpg',
-      caption: 'Teddy bear ke saath tu kitni adorable lag rahi hai! 🧸 Pink mein tu princess lagti hai!',
+      caption: 'Teddy bear ke saath tu kitni adorable lag rahi hai! 🧸 This Pic is becoming my fav fr',
       location: 'Cozy Home',
       date: 'Cuddle Time'
     }
