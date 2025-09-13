@@ -19,11 +19,11 @@ const HomePage: React.FC = () => {
 
       {/* Main Birthday Greeting */}
       <h1 className="text-5xl md:text-7xl font-extrabold text-pink-600 drop-shadow-lg animate-bounce">
-        🎂 Happy Birthday Saanvi 💖
+        🎂 Happyyyy Birthdayyyy Saanu!!! 💖
       </h1>
       <p className="mt-4 text-xl md:text-2xl text-gray-700 italic">
-        Aaj ke din tu meri Queen hai 👑<br />  
-        aur main tera Aru Forever 😏
+        So my Queen It's you special day!👑<br />  
+        Let me Make it super special! 😏
       </p>
 
       {/* Decorative Line */}
@@ -31,8 +31,8 @@ const HomePage: React.FC = () => {
 
       {/* Subline */}
       <p className="mt-6 text-lg text-gray-600 max-w-md">
-        Yeh journey shuru hoti hai <span className="font-semibold text-pink-500">ek chhoti si wish</span> se,  
-        aur khatam hoti hai <span className="font-semibold text-purple-500">dher saari surprises</span> pe 💫
+        Yeh gift shuru hoti hai <span className="font-semibold text-pink-500">ek chhoti si wish</span> se,  
+        aur khatam hota hai <span className="font-semibold text-purple-500">dher saare surprises</span> pe 💫
       </p>
     </div>
   );
