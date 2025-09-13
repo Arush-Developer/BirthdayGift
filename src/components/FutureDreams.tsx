@@ -26,7 +26,7 @@ const FutureDreams: React.FC = () => {
       id: 2,
       title: 'Candlelight Dinner 🍷',
       icon: Utensils,
-      description: 'Romantic dinner date, just for my CEO!',
+      description: 'Romantic dinner date, just for my bacha!',
       details: 'Fancy restaurant mein table for two, candles, soft music, aur tera favorite food! Tu dress up karegi, main suit pehenunga... perfect gentleman ban jaunga! 🕯️✨',
       color: 'from-red-400 to-pink-500'
     },
@@ -59,7 +59,7 @@ const FutureDreams: React.FC = () => {
       title: 'Shaadi... Future Mein 😉💍',
       icon: Heart,
       description: 'Kabhi future mein... when the time is right!',
-      details: 'Abhi toh bas dreams hain, but imagine... big fat Indian wedding, tu dulhan banegi, main dulha! Family, friends, aur bahut saara celebration! But yeh sab future ki baat hai... abhi toh bas dating enjoy karte hain! 👰🤵',
+      details: 'Abhi toh bas dreams hain, but imagine... big fat Indian wedding, tu dulhan banegi, main dulha! Family, friends, aur bahut saara celebration! But yeh sab future ki baat hai... abhi toh aapka birthday enjoy karte hain! 👰🤵',
       color: 'from-pink-400 to-rose-500'
     }
   ];
