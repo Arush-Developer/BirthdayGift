@@ -45,5 +45,5 @@ export const getCountdownMessage = (): string => {
   if (diffDays === 2) return "Bas 2 din aur… phir sabse bada surprise 💖";
   if (diffDays <= 5) return `${diffDays} din aur… sabr ka phal meetha hota hai jaan 💕`;
 
-  return "October ka magic shuru ho gaya hai… wait for it! ✨";
+  return "Aapki Smile dekhne ka intezaar hai bas! Jaldi se Special Day aajaye! ✨";
 };
