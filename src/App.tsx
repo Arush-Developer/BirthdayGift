@@ -24,20 +24,20 @@ function App() {
 
   // All pages in sequence
   const pages = [
-    <HomePage />,
-    <MemoryLane />,
-    <LoveLetterRoom />,
-    <BalloonGame />,
-    <PersonalQuiz />,
-    <VirtualGiftBox />,
-    <StarryNight />,
-    <FutureDreams />,
-    <PolaroidWall />,
-    <ScratchCard />,
-    <FortuneTeller />,
-    <LoveCalculator />,
-    <PlaylistPage />,
-    <GrandFinale />
+    <HomePage key="home" />,
+    <MemoryLane key="memory" />,
+    <LoveLetterRoom key="letters" />,
+    <BalloonGame key="balloons" />,
+    <PersonalQuiz key="quiz" />,
+    <VirtualGiftBox key="gift" />,
+    <StarryNight key="stars" />,
+    <FutureDreams key="dreams" />,
+    <PolaroidWall key="polaroid" />,
+    <ScratchCard key="scratch" />,
+    <FortuneTeller key="fortune" />,
+    <LoveCalculator key="calculator" />,
+    <PlaylistPage key="playlist" />,
+    <GrandFinale key="finale" />
   ];
 
   useEffect(() => {
@@ -58,23 +58,17 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Always reset to first page when curtains open
+  // Reset to first page when curtains open
   const handleCurtainsOpen = () => {
     setCurrentStep(0);
     setShowCurtains(false);
+    window.scrollTo({ top: 0, behavior: 'auto' }); // jump to top instantly
   };
 
-  // Extra safety: whenever curtains close → reset step
+  // Auto-scroll to top whenever currentStep changes
   useEffect(() => {
-    if (!showCurtains) {
-      setCurrentStep(0);
-    }
-  }, [showCurtains]);
-
-  // Debug log (optional, remove when not needed)
-  useEffect(() => {
-    console.log('DEBUG:', { showCurtains, currentStep });
-  }, [showCurtains, currentStep]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentStep]);
 
   if (!isUnlockedState) {
     return <CountdownPage />;
