@@ -45,7 +45,7 @@ const CountdownPage: React.FC = () => {
             🔒 Surprise Locked 🔒
           </h1>
           <p className="text-pink-600 font-medium italic">
-            Ms. CEO ka special din bas aane hi wala hai...
+            Newatia ji ka special din bas aane hi wala hai...
           </p>
         </div>
 
@@ -80,7 +80,7 @@ const CountdownPage: React.FC = () => {
         {/* Footer */}
         <div className="mt-6 text-sm text-gray-500">
           <p>🎂 Unlocks on <span className="font-semibold text-pink-600">07 October, 12:00 AM</span> 🎂</p>
-          <p className="mt-2 italic">Sabr ka phal meetha hota hai, jaanu 😘</p>
+          <p className="mt-2 italic">Sabar ka phal meetha hota hai jaanu 😘</p>
         </div>
       </div>
     </div>
