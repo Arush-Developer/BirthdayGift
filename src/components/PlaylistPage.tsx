@@ -121,7 +121,7 @@ const PlaylistPage: React.FC = () => {
             Made with love by Arush ❤️
           </p>
           <p className="text-lg text-pink-300">
-            {playlist.length} songs specially curated for my CEO! 👑
+            {playlist.length} Here are some songs for you!
           </p>
         </div>
 
