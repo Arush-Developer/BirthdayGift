@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Music, Play, Pause, SkipForward, SkipBack, Heart, Volume2 } from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Heart } from 'lucide-react';
 
 interface Song {
   id: number;
@@ -8,7 +8,7 @@ interface Song {
   dedication: string;
   duration: string;
   coverColor: string;
-  file: string; // 🔥 add file path
+  file: string; // path to mp3
 }
 
 const PlaylistPage: React.FC = () => {
@@ -21,10 +21,10 @@ const PlaylistPage: React.FC = () => {
       id: 1,
       title: "Jhol",
       artist: "Saani's Eyes",
-      dedication: "uff... sachi mai teri yaad aa jati ye sunke  💕",
+      dedication: "uff... sachi mai teri yaad aa jati ye sunke 💕",
       duration: "1:43",
       coverColor: "from-pink-400 to-rose-500",
-      file: "/songs/perfect.mp3"
+      file: "/songs/perfect.mp3",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const PlaylistPage: React.FC = () => {
       dedication: "This song gives another Vibe isn't",
       duration: "4:22",
       coverColor: "from-purple-400 to-indigo-500",
-      file: "/songs/tumhiho.mp3"
+      file: "/songs/tumhiho.mp3",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ const PlaylistPage: React.FC = () => {
       dedication: "sach mai how do i express mere dil ka haal 💖",
       duration: "4:29",
       coverColor: "from-blue-400 to-cyan-500",
-      file: "/songs/allofme.mp3"
+      file: "/songs/allofme.mp3",
     },
     {
       id: 4,
@@ -51,11 +51,11 @@ const PlaylistPage: React.FC = () => {
       dedication: "Humara connection = Raabta! Filmy but true! 😍",
       duration: "4:18",
       coverColor: "from-green-400 to-teal-500",
-      file: "/songs/raabta.mp3"
-    }
+      file: "/songs/raabta.mp3",
+    },
   ];
 
-  const currentSongData = playlist.find(song => song.id === currentSong);
+  const currentSongData = playlist.find((song) => song.id === currentSong);
 
   const handlePlayPause = (songId: number) => {
     if (currentSong === songId) {
@@ -67,7 +67,7 @@ const PlaylistPage: React.FC = () => {
         setIsPlaying(true);
       }
     } else {
-      const song = playlist.find(s => s.id === songId);
+      const song = playlist.find((s) => s.id === songId);
       if (song && audioRef.current) {
         audioRef.current.src = song.file;
         audioRef.current.play();
@@ -79,7 +79,7 @@ const PlaylistPage: React.FC = () => {
 
   const handleNext = () => {
     if (currentSong === null) return;
-    const currentIndex = playlist.findIndex(song => song.id === currentSong);
+    const currentIndex = playlist.findIndex((song) => song.id === currentSong);
     const nextIndex = (currentIndex + 1) % playlist.length;
     const nextSong = playlist[nextIndex];
     if (audioRef.current) {
@@ -92,7 +92,7 @@ const PlaylistPage: React.FC = () => {
 
   const handlePrevious = () => {
     if (currentSong === null) return;
-    const currentIndex = playlist.findIndex(song => song.id === currentSong);
+    const currentIndex = playlist.findIndex((song) => song.id === currentSong);
     const prevIndex = currentIndex === 0 ? playlist.length - 1 : currentIndex - 1;
     const prevSong = playlist[prevIndex];
     if (audioRef.current) {
@@ -103,7 +103,6 @@ const PlaylistPage: React.FC = () => {
     setIsPlaying(true);
   };
 
-  // Auto move to next when song ends
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.onended = () => handleNext();
@@ -113,7 +112,6 @@ const PlaylistPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
       <div className="max-w-4xl mx-auto px-4">
-        
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
@@ -127,8 +125,32 @@ const PlaylistPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Player UI (same as before)... */}
-        {/* KEEP YOUR EXISTING PLAYER UI CODE HERE (album art, dedication, controls, etc.) */}
+        {/* Songs List */}
+        <div className="grid gap-6">
+          {playlist.map((song) => (
+            <div
+              key={song.id}
+              className={`p-6 rounded-2xl bg-gradient-to-r ${song.coverColor} shadow-lg flex items-center justify-between`}
+            >
+              <div>
+                <h3 className="text-2xl font-semibold text-white">{song.title}</h3>
+                <p className="text-sm text-white/80">{song.artist}</p>
+                <p className="mt-2 text-white italic">{song.dedication}</p>
+                <p className="text-xs text-white/60 mt-1">{song.duration}</p>
+              </div>
+              <button
+                onClick={() => handlePlayPause(song.id)}
+                className="bg-white text-purple-700 rounded-full p-4 shadow-md hover:scale-110 transition"
+              >
+                {currentSong === song.id && isPlaying ? (
+                  <Pause size={24} />
+                ) : (
+                  <Play size={24} />
+                )}
+              </button>
+            </div>
+          ))}
+        </div>
 
         {/* Hidden Audio Element */}
         <audio ref={audioRef} />
@@ -138,3 +160,4 @@ const PlaylistPage: React.FC = () => {
 };
 
 export default PlaylistPage;
+
