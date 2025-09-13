@@ -155,12 +155,12 @@ const GrandFinale: React.FC<GrandFinaleProps> = ({ onRestart }) => {
                 The End... Or Is It? 😏
               </h3>
               <p className="text-white font-medium leading-relaxed">
-                Yeh website khatam ho gayi, but humari love story abhi shuru hui hai! 
+                Yeh website khatam ho gayi, but tera birthday abhi shuru hua hai! 
                 Real life mein aur bhi surprises waiting hain! 
-                Get ready for more adventures, Ms. CEO! 💖👑
+                Get ready for more adventures Baby 💖
               </p>
               <p className="text-pink-300 mt-4 text-sm">
-                P.S. - Agar yeh website pasand aayi, toh wait kar next surprise ka! 😘
+                Agar yeh gift pasand aaya, toh wait kar next surprise ka! 😘
               </p>
             </div>
           </div>
