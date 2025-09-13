@@ -99,17 +99,30 @@ function App() {
           {/* Render current page */}
           <div className="w-full">{pages[currentStep]}</div>
 
-          {/* Next button */}
-          {currentStep < pages.length - 1 && (
-            <button
-              onClick={() =>
-                setCurrentStep((prev) => Math.min(prev + 1, pages.length - 1))
-              }
-              className="mt-8 px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-2xl shadow-lg hover:bg-pink-600 transition-all"
-            >
-              Next ➡️
-            </button>
-          )}
+          {/* Navigation buttons */}
+          <div className="flex justify-between w-full max-w-4xl mt-8 px-6">
+            {currentStep > 0 && (
+              <button
+                onClick={() =>
+                  setCurrentStep((prev) => Math.max(prev - 1, 0))
+                }
+                className="px-6 py-3 bg-gray-500 text-white text-lg font-semibold rounded-2xl shadow-lg hover:bg-gray-600 transition-all"
+              >
+                ⬅ Back
+              </button>
+            )}
+
+            {currentStep < pages.length - 1 && (
+              <button
+                onClick={() =>
+                  setCurrentStep((prev) => Math.min(prev + 1, pages.length - 1))
+                }
+                className="ml-auto px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-2xl shadow-lg hover:bg-pink-600 transition-all"
+              >
+                Next ➡️
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
