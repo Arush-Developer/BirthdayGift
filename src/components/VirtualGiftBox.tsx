@@ -110,7 +110,7 @@ const VirtualGiftBox: React.FC = () => {
                       </h4>
                       
                       <div className="space-y-3 text-lg text-gray-700 font-medium">
-                        <p>✅ 1000 Unlimited Hugs</p>
+                        <p>✅ Unlimited Hugs</p>
                         <p>✅ 1 Dreamy Goa Trip 🏖️</p>
                         <p>✅ Unlimited Cuddles</p>
                         <p>✅ Date Nights (Your Choice!) 🍽️</p>
@@ -129,7 +129,7 @@ const VirtualGiftBox: React.FC = () => {
                     
                     <div className="mt-6 space-y-3">
                       <p className="text-lg text-pink-600 font-bold">
-                        "Redeem whenever you want, Ms. CEO! 💖"
+                        "Redeem whenever you want, Meri Jaan 💖"
                       </p>
                       <p className="text-sm text-gray-500">
                         Terms & Conditions: Love is mandatory 😘
@@ -146,7 +146,7 @@ const VirtualGiftBox: React.FC = () => {
           <div className="text-center mt-8">
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-pink-200 inline-block">
               <p className="text-lg text-gray-700 font-medium">
-                Yeh sirf starting hai... aur bhi surprises coming soon! 😍
+                Yeh sirf starting hai... aur bhi surprises are coming soon! 😍
               </p>
               <p className="text-pink-600 mt-2">
                 Goa trip book karna hai? Just say the word! ✈️🏖️
