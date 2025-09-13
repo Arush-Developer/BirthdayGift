@@ -1,6 +1,8 @@
+// utils/dateUtils.ts
+
 export const isUnlocked = (): boolean => {
   const now = new Date();
-  const unlockDate = new Date('2024-10-07T00:00:00');
+  const unlockDate = new Date('2025-10-07T00:00:00'); // ✅ fixed year
   return now >= unlockDate;
 };
 
@@ -12,7 +14,7 @@ export const shouldBypass = (): boolean => {
 
 export const getTimeUntilUnlock = () => {
   const now = new Date();
-  const unlockDate = new Date('2025-10-07T00:00:00');
+  const unlockDate = new Date('2025-10-07T00:00:00'); // ✅ same year as above
   const diff = unlockDate.getTime() - now.getTime();
   
   if (diff <= 0) {
@@ -29,22 +31,19 @@ export const getTimeUntilUnlock = () => {
 
 export const getCountdownMessage = (): string => {
   const now = new Date();
-  const currentDate = now.getDate();
-  const currentMonth = now.getMonth() + 1; // JavaScript months are 0-based
-  
-  // Only show messages in October
-  if (currentMonth !== 10) {
-    return "October aa jaaye, phir countdown shuru hoga! 😊";
+  const unlockDate = new Date('2025-10-07T00:00:00');
+  const diffDays = Math.ceil(
+    (unlockDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
+  if (diffDays <= 0) {
+    return "Birthday aa gaya! Time to unlock! 🎂";
   }
-  
-  const messages: { [key: number]: string } = {
-    1: "Bas 6 din bache… patience rakho meri jaan 💕",
-    2: "5 din aur… phir aayega sabse bada surprise 🎉",
-    3: "4 din… aur fir tu star banegi iss website ki 🌟",
-    4: "3 din left… excited naaa? 😏",
-    5: "2 din… thoda aur wait baby 💖",
-    6: "Kal raat ko 12 baje… dhamaaka hoga 😘"
-  };
-  
-  return messages[currentDate] || "Birthday aa gaya! Time to unlock! 🎂";
+
+  // Romantic countdown messages
+  if (diffDays === 1) return "Kal raat ko 12 baje… dhamaaka hoga 😘";
+  if (diffDays === 2) return "Bas 2 din aur… phir sabse bada surprise 💖";
+  if (diffDays <= 5) return `${diffDays} din aur… sabr ka phal meetha hota hai jaan 💕`;
+
+  return "October ka magic shuru ho gaya hai… wait for it! ✨";
 };
