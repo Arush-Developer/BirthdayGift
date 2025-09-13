@@ -19,23 +19,23 @@ const LoveLetterRoom: React.FC = () => {
     },
     {
       id: 2,
-      message: "Mera dil = tera permanent office hai 😘 Aur tu wahan ki permanent employee! No resignation letter accept nahi karunga!",
-      sender: "Your HR Manager - Arush 💼"
+      message: "I swere agar tu kabhi khud ko meri aankho se dekh leti to apne hi pyaar mai pagal hojati",
+      sender: "Your Ashiq - Arush "
     },
     {
       id: 3,
-      message: "Tu meri khushi ka promotion hai ✨ Jab se tu aayi hai, meri life ka salary double ho gaya hai!",
+      message: "Tu meri zindagi mai jabse aayi hai, meri life ki balance sheet mai khushi itni jyada ho chuki hai ki dukh se balance hi nahi ho pati",
       sender: "Your Finance Department - Arush 💰"
     },
     {
       id: 4,
-      message: "Meeting with you = Best part of my day 🌟 Tu mere calendar ka sabse important appointment hai!",
-      sender: "Your Personal Assistant - Arush 📅"
+      message: "Din mai tujhse baat karna is best moment of my day!, 0.1 Second mai smile aa jati hai mere chehre par tujhe dekhne se",
+      sender: "Your Admirer - Aru"
     },
     {
       id: 5,
-      message: "Tu meri company ki chairman hai 👑 Aur main tera dedicated worker forever!",
-      sender: "Your Biggest Fan - Arush 🏢"
+      message: "You are my bestfriend my girlfriend and my everything fr!",
+      sender: "Your Aru"
     }
   ];
 
@@ -75,7 +75,7 @@ const LoveLetterRoom: React.FC = () => {
             Dreamy room mein floating envelopes... click kar aur love notes padh! 😍
           </p>
           <p className="text-lg text-pink-600">
-            {openLetter ? 'Letter khul gaya! Padh le Ms. CEO! 💖' : 'Koi envelope choose kar... surprise aa raha hai! ✨'}
+            {openLetter ? 'Letter khul gaya! Padh le darling 💖' : 'Koi envelope choose kar... surprise aa raha hai! ✨'}
           </p>
         </div>
 
@@ -144,7 +144,7 @@ const LoveLetterRoom: React.FC = () => {
                 Saare letters padhne ke liye ek ek karke click kar! 😊
               </p>
               <p className="text-pink-600 mt-2">
-                Each letter mein tera koi na koi special talent mention hai! 💕
+                Every letter says something, I always want to say lol 💕
               </p>
             </div>
           </div>
