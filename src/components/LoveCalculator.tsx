@@ -101,7 +101,7 @@ const LoveCalculator: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-gray-700 font-medium mb-2">
-                  First Name 💕
+                  Couple Name 1 💕
                 </label>
                 <input
                   type="text"
@@ -115,7 +115,7 @@ const LoveCalculator: React.FC = () => {
               
               <div>
                 <label className="block text-gray-700 font-medium mb-2">
-                  Second Name 💕
+                  Couple Name 2 💕
                 </label>
                 <input
                   type="text"
