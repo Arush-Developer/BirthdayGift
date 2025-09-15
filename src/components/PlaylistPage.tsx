@@ -20,7 +20,7 @@ const PlaylistPage: React.FC = () => {
     {
       id: 1,
       title: "Jhol",
-      artist: "Saani's Eyes",
+      artist: "Mannu",
       dedication: "uff... sachi mai teri yaad aa jati ye sunke 💕",
       duration: "1:43",
       coverColor: "from-pink-400 to-rose-500",
@@ -29,7 +29,7 @@ const PlaylistPage: React.FC = () => {
     {
       id: 2,
       title: "Mann Mera",
-      artist: "Brain",
+      artist: "Gajendra Verma",
       dedication: "This song gives another Vibe isn't",
       duration: "4:22",
       coverColor: "from-purple-400 to-indigo-500",
@@ -38,7 +38,7 @@ const PlaylistPage: React.FC = () => {
     {
       id: 3,
       title: "Dil ka jo Haal",
-      artist: "Heart",
+      artist: "Rajeev Barnwal",
       dedication: "sach mai how do i express mere dil ka haal 💖",
       duration: "4:29",
       coverColor: "from-blue-400 to-cyan-500",
@@ -46,9 +46,9 @@ const PlaylistPage: React.FC = () => {
     },
     {
       id: 4,
-      title: "Raabta",
-      artist: "Arijit Singh",
-      dedication: "Humara connection = Raabta! Filmy but true! 😍",
+      title: "Saiyaara",
+      artist: "Faheem Abdullah",
+      dedication: "Mere Saiyaara, this one's for you",
       duration: "4:18",
       coverColor: "from-green-400 to-teal-500",
       file: "/songs/raabta.mp3",
@@ -115,7 +115,7 @@ const PlaylistPage: React.FC = () => {
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
-            Saanvi's Special Playlist 🎶
+            Special SOng for you my girl. 🎶
           </h2>
           <p className="text-xl text-purple-200 font-medium mb-4">
             Made with love by Arush ❤️
