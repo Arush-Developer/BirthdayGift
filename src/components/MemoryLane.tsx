@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Clock, MapPin, Heart } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Clock, MapPin, Heart, Volume2, VolumeX } from 'lucide-react';
 
 interface Memory {
   id: number;
@@ -11,6 +11,30 @@ interface Memory {
 
 const MemoryLane: React.FC = () => {
   const [selectedMemory, setSelectedMemory] = useState<number | null>(null);
+  const [isMuted, setIsMuted] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = 0.5; // softer bg music
+      const playAudio = async () => {
+        try {
+          await audio.play();
+        } catch (err) {
+          console.log("Autoplay blocked, user interaction required.");
+        }
+      };
+      playAudio();
+    }
+  }, []);
+
+  const toggleMute = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = !audioRef.current.muted;
+      setIsMuted(audioRef.current.muted);
+    }
+  };
 
   const memories: Memory[] = [
     {
@@ -51,7 +75,18 @@ const MemoryLane: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 py-20 relative">
+      {/* Background Music */}
+      <audio ref={audioRef} src="/birthday.mp3" autoPlay loop />
+
+      {/* Toggle Mute Button */}
+      <button
+        onClick={toggleMute}
+        className="fixed bottom-5 right-5 bg-white/80 backdrop-blur-md rounded-full p-3 shadow-lg hover:scale-110 transition"
+      >
+        {isMuted ? <VolumeX className="w-6 h-6 text-pink-600" /> : <Volume2 className="w-6 h-6 text-pink-600" />}
+      </button>
+
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
