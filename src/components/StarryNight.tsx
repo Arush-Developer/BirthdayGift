@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Star, Heart, Sparkles } from 'lucide-react';
 
 const StarryNight: React.FC = () => {
   const [clickedStars, setClickedStars] = useState<number[]>([]);
   const [showFinalMessage, setShowFinalMessage] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const starMessages = [
     "Teri smile = mera daily charger 🔋❤️",
     "Tu meri life ki promotion hai 😏",
     "Tere bina mera dil incomplete lagta hai 💕",
     "Tu meri sabse favorite notification hai 📱💖",
-    "Tera hasso = meri best medicine 😊",
-    "Tu meri dreams ki CEO hai 👑",
-    "Tere saath time = fast forward ho jaata hai ⏰",
+    "Teri hassi is meri best medicine 😊",
+    "Tu meri dream girl hai",
+    "Tere saath time fast forward ho jaata hai ⏰",
     "Tu meri happiness ka permanent address hai 🏠💕"
   ];
 
@@ -26,8 +27,19 @@ const StarryNight: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {
+        console.log("Autoplay blocked, will play after first tap/click 🎵");
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-black py-20 relative overflow-hidden">
+      {/* Background Music */}
+      <audio ref={audioRef} src="/songs/twinkle.mp3" autoPlay loop />
+
       {/* Twinkling stars background */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
@@ -47,6 +59,7 @@ const StarryNight: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 relative z-10">
+        {/* Title & counter */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
             Starry Night Sky 🌌
@@ -61,6 +74,7 @@ const StarryNight: React.FC = () => {
           </p>
         </div>
 
+        {/* Main section (same as your code) */}
         {!showFinalMessage ? (
           <div className="relative h-96 mb-8">
             {starMessages.map((message, index) => (
@@ -131,6 +145,7 @@ const StarryNight: React.FC = () => {
           </div>
         )}
 
+        {/* Footer */}
         <div className="text-center mt-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-blue-300">
             <div className="flex items-center justify-center mb-4">
