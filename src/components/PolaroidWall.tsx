@@ -16,11 +16,11 @@ const PolaroidWall: React.FC = () => {
   const polaroids: Polaroid[] = [
     { id: 1, image: '/6.jpg', frontText: 'The little Princess 💕', caption: 'Aaha pretty Little baby! i am so in love with you', rotation: 'rotate-3' },
     { id: 2, image: '/7.jpg', frontText: 'Smile Queen', caption: 'Iss baat mai koi shaq nahi hai ki bachpan se hi teri smile best hai', rotation: '-rotate-2' },
-    { id: 3, image: '/8.jpg', frontText: 'Woah this pic is just..', caption: 'That bun wala hairstyle! its super hot and attractive!!!', rotation: 'rotate-1' },
-    { id: 4, image: '/9.jpg', frontText: 'That Sunkiss', caption: 'Aaha! even the sunray cant resist kissing you beautifooool 📸✨', rotation: '-rotate-3' },
-    { id: 5, image: '/10.jpg', frontText: 'Teddy Bear Cuddles 🧸', caption: 'Teddy bear ke saath tu kitni adorable lag rahi hai! Pink mein tu princess lagti hai! Cuteness overload! 💖👑', rotation: 'rotate-2' },
-    { id: 6, image: '/11.jpg', frontText: 'Sunny Day Smile ☀️', caption: 'Tu ki yeh sunny day smile = pure happiness! Bright aur glowing! 🌞💛', rotation: '-rotate-1' },
-    { id: 7, image: '/12.jpg', frontText: 'Beach Vibes 🌊', caption: 'Beach par tu kaise bhi cute lag rahi hai! Yeh moment hamesha yaad rahega! 🏖️💖', rotation: 'rotate-2' },
+    { id: 3, image: '/8.jpg', frontText: 'Woah this pic is just..', caption: 'That bun wala hairstyle! its super hot and attractive!!!📸✨', rotation: 'rotate-1' },
+    { id: 4, image: '/9.jpg', frontText: 'That Sunkiss', caption: 'Aaha! even the sunray cant resist kissing you beautifooool 🌞💛', rotation: '-rotate-3' },
+    { id: 5, image: '/10.jpg', frontText: 'Snowy Queen', caption: 'Embracing the thrill of the snow-covered slopes, feeling the cold breeze, and making unforgettable memories on this epic ski adventure!', rotation: 'rotate-2' },
+    { id: 6, image: '/11.jpg', frontText: 'Mountain vibes', caption: 'Watching her walk through nature’s beauty, where every step she takes makes the world seem a little brighter. 💖', rotation: '-rotate-1' },
+    { id: 7, image: '/12.jpg', frontText: 'Hotness ka Pitara', caption: 'Sometimes, it is the little things that make me smile like your playful pose and the way you light up my mood. 💫💖', rotation: 'rotate-2' },
     { id: 8, image: '/13.jpg', frontText: 'Night Lights ✨', caption: 'Raat ke lights mein tu aur bhi dreamy lag rahi hai! Truly magical moment! 🌙💫', rotation: '-rotate-2' }
   ];
 
