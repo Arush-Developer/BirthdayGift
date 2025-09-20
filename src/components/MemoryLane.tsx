@@ -77,7 +77,7 @@ const MemoryLane: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 py-20 relative">
       {/* Background Music */}
-      <audio ref={audioRef} src="/birthday.mp3" autoPlay loop />
+      <audio ref={audioRef} src="/songs/dinbhi.mp3" autoPlay loop />
 
       {/* Toggle Mute Button */}
       <button
